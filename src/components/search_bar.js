@@ -16,8 +16,9 @@ class SearchBar extends Component {
 	render () {
 		return (
 			<div>
-				<input onChange={(e) => this.setState({term: e.target.value})} />
-				Value of the input: {this.state.term}
+				<input 
+				value={this.state.term}
+				onChange={(e) => this.setState({term: e.target.value})} />
 			</div>
 		);
 		
@@ -25,13 +26,13 @@ class SearchBar extends Component {
 		// <input onChange={this._handleInputChange} />
 	}
 
-	_handleInputChange (e) {
-		// e.preventDefault();
-		// console.log(e.target.value);
-		this.setState({
-			term: e.target.value
-		});
-	}
+	// _handleInputChange (e) {
+	// 	// e.preventDefault();
+	// 	// console.log(e.target.value);
+	// 	this.setState({
+	// 		term: e.target.value
+	// 	});
+	// }
 }
 
 // module.exports(SearchBar);
